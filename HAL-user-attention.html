@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HAL Research: Detecting User Attention</title>
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+       <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" height="80" width="250" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box-header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">About me</li>
+
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="contact.html">contact me</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>Human Augmentation Lab</h1>
+        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / HAL Research</p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="img/Year2/SummerBCI.jpg" alt="" class="img-responsive" />
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">Human Augmentation Lab</h3>
+            <h5> Detecting User Attention </h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+            <i>Project Summary:</i>
+            <p>A major undertaking of the newly formed Human Augmentation Lab was to validate our medical-grade EEG equipment and begin piloting experiments. We collected data pertaining to visual attention using the 32-channel Enobio EEG Cap. The subject was instructed to attend to one of two flashing checkerboards on a computer monitor, each oscillating at distinct frequencies. The Steady State Visual Evoked Potential (SSVEP) response was captured over the occipital lobe and validated using signal processing and frequency analysis in EEGLAB.</p>
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Research </li>
+                <li><i class="ion-ios-circle-filled"></i> Signal Processing </li>
+                <li><i class="ion-ios-circle-filled"></i> Experimental Design </li>
+                <li><i class="ion-ios-circle-filled"></i> <a href="https://github.com/HumanAugmentationLab/HALBCI">Github Repo</a> </li>
+            </ul>
+        </div>
+
+        <div class="col-md-11">
+            <div class="paddedline-two"> </div>
+            <center>
+                <img src="img/Year1/summer1.jpg" alt="" height = 350 style= "PADDING-TOP: 20px ; PADDING-RIGHT: 50px;" />
+                <img src="img/Year1/eeg2.png" alt="" height = 350px />
+                <br> <div class="paddedline"> </div>
+                <i>Figure 1 . Subject Wearing Enobio Cap</i>
+            </center>
+
+            <i>Project Details:</i>
+            <p>As stated above, all steps that follow were implemented using EEGLAB, a MATLAB toolbox for offline biosignal analysis.</p>
+            <p>First, we performed channel selection and epoched the data, compiling all trials in which the user attended to the lower frequency checkerboard and distinguishing them from trials attending to the higher frequency.</p>
+            <p>We then performed Independent Component Analysis (ICA) on both datasets and visually inspected the components in the frequency domain, rejecting artifacts and selecting the most relevant responses for the known target frequency. We applied this component pruning to a concatenated version of the data, plotted the mean spectral response for selected channels, and visualized the topographic power distribution at target frequencies. As shown below, target frequencies (e.g., 15 and 20 Hertz) are visually apparent post-processing.</p>
+
+            <center>
+            <div class="paddedline"> </div>
+            <img src="img/Year1/specto1.png" alt="" height = 375px style= "PADDING-TOP: 20px ; PADDING-RIGHT: 50px;" />
+            <img src="img/Year1/specto2.png" alt="" height = 350px />
+            <div class="paddedline"> </div>
+            <i>Left: Trials attending to 15 Hz. &emsp;&emsp;&emsp; Right: Trials attending to 20 Hz. <br> Both: Alpha wave (10 Hz) behavior is commonly observed when the user is relaxed. <br> Figure 2. Spectopographic Plot of SSVEP Response</i>
+            <div class="paddedline"> </div>
+            </center>
+
+            <p>As a final step, we plotted the mean relative power and standard deviations for each trial at target frequencies. Comparing the calculated responses to the known target frequency allowed us to determine the accuracy of our classifier in determining to which checkerboard the user was attending.</p>
+            <center>
+            <img src="img/Year1/attnclass.png" alt="" height = 350px />
+            <div class="paddedline"> </div>
+            <i>Figure 3. Power Response for 15 vs. 20 Hz Attention</i>
+            <div class="paddedline"> </div>
+            </center>
+
+            <h2>Gallery:</h2>
+
+            <center>
+            <div class="paddedline"> </div>
+            <img src="img/Year1/SummerBCI.jpg" alt="" height = 350px />
+            <div class="paddedline"> </div>
+            <i>Figure 4. Experimental Setup</i>
+            <div class="paddedline"> </div>
+            </center>
+
+            <center>
+            <div class="paddedline"> </div>
+            <img src="img/Year1/summer3.PNG" alt="" height = 350px />
+            <div class="paddedline"> </div>
+            <i>Figure 5. Spectral Response for Various Target Frequencies. <br> Measured from Central Electrode Placed on Occipital Lobe (Visual Center).</i>
+            <div class="paddedline"> </div>
+            </center>
+        </div>
+    </div>
+    <!-- end main-container -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">ava.lakmazaheri@students.olin.edu</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

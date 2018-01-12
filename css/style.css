@@ -51,8 +51,21 @@ body {
     padding-bottom: 20px;
 }
 
+.paddedline {
+    padding-bottom: 20px;
+}
+
+.paddedline-two {
+    padding-bottom: 40px;
+}
+
 .main-container {
     padding: 100px 0;
+    padding-right: 20px;
+}
+
+.main-container-copy {
+    padding: 0px 0;
 }
 
 .center {
@@ -64,6 +77,14 @@ a {
     transition: all .3s
 }
 
+img {
+    vertical-align: bottom;
+}
+
+span.padding{
+    padding-left: 5%;
+    padding-right: 35%
+}
 .uppercase {
     text-transform: uppercase;
 }
@@ -93,6 +114,11 @@ h1 {
 
 h3 {
     color: #393939;
+}
+
+h4 {
+    color: #393939;
+    font-size: 15px;
 }
 
 h5 {
@@ -859,7 +885,7 @@ footer img {
     right: 10px;
     text-align: center;
     color: #fff;
-    background: rgba(255, 191, 0, 0.8);
+    background: rgba(183, 142, 227, 0.8);
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
@@ -896,7 +922,7 @@ footer img {
 
 .top-bar {
     color: #333;
-    padding: 150px 0 100px;
+    padding: 170px 0 50px;
     background: -webkit-linear-gradient( rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(../img/01.jpg);
     background: linear-gradient( rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(../img/01.jpg);
     background-size: cover;
@@ -918,6 +944,7 @@ footer img {
     text-transform: uppercase;
     font-weight: 500;
     color: #777;
+
 }
 
 .top-bar p a {
@@ -1082,10 +1109,10 @@ textarea:focus {
 }
 
 .btn-box {
-    background: #b78ee3;
+    background: #3A4144;
     padding: 10px 50px;
     border-radius: 0;
-    color: #fff;
+    color: #000;
     margin-top: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1094,8 +1121,8 @@ textarea:focus {
 
 .btn-box:hover,
 .btn-box:focus {
-    background: #b78ee3;
-    color: #fff;
+    background: #3A4144;
+    color: #000;
 }
 
 
@@ -1110,6 +1137,8 @@ textarea:focus {
 .cat-ul li i {
     margin-right: 10px;
     color: #b78ee3;
+    text-align: right;
+
 }
 
 
@@ -1130,6 +1159,7 @@ textarea:focus {
     }
     .col-md-6 h3 {
         margin-top: 30px;
+        text-align: bottom;
     }
 }
 
@@ -1168,6 +1198,7 @@ textarea:focus {
     }
     .main-container {
         padding: 50px 0;
+        padding-right: 20px;
     }
 }
 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HAL Research: Detecting User Attention</title>
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+       <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" height="80" width="250" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box-header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">About me</li>
+
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="contact.html">contact me</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>Human Augmentation Lab</h1>
+        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / HAL Research</p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">Human Augmentation Lab</h3>
+            <h5> Controlling a Mobile Robot by User State </h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+            <i>Project Summary:</i>
+            <p>The first task of the new lab was developing a rudimentary brain-computer interface (BCI) using commercial-grade technologies.</p>
+            <p>We used the Muse EEG headset to detect whether a subject was relaxing with their eyes closed or focusing with eyes opened. These states were mapped to the navigation of a Neato mobile robot, such that it would move forward when the user has their eyes closed and otherwise remain stationary. </p>
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Research </li>
+                <li><i class="ion-ios-circle-filled"></i> Signal Processing </li>
+                <li><i class="ion-ios-circle-filled"></i> <a href="https://github.com/HumanAugmentationLab/HALBCI">Github Repo</a> </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-11">
+            <i>Project Details:</i>
+            <p>The steps of this process were four-fold.</p>
+            <p>First, data was collected for the training period. Over the duration of a few minutes, a graphical interface repeatedly cued the user to either close or open their eyes. As they followed the instructions, a Muse electroencephalogram (EEG) headset non-invasively recorded the subject’s brainwaves from four electrodes placed along the forehead. A photodiode circuit secured to the monitor display was used to accurately detect when the stimulus was shown onscreen such that only the behavior from immediately after a stimulus would be analyzed for classification. </p>
+            <p>The following training procedure was then applied to the recorded data to identify maximally different patterns between the two user states. All signal processing and analysis was performed in BCILAB, a MATLAB toolbox developed by Swartz Center for Computational Neuroscience. After preliminary epoching and filtering, we applied spectral Common Spatial Pattern (CSP) for feature extraction and computed a statistical model of the feature distributions using Linear Discriminant Analysis (LDA). The model was trained and evaluated using Mean Square Error with cross-validation.</p>
+            <p>The training model was then applied to new data for live classification. As the user opens and closes their eyes, the processing schema predicts which of the two classes the user is performing in real-time and casts the prediction to a live output stream. The system as described above performed well in capturing the transition between states via event-related potentials, but poorly represented longer-term oscillatory processes pertaining when an individual sustained either position.</p>
+
+            <center>
+            <div class="paddedline"> </div>
+            <img src="img/Year1/erp1.jpg" alt="" width = 30% style= "PADDING-TOP: 20px ; PADDING-RIGHT: 50px;" />
+            <img src="img/Year1/erp2.jpg" alt="" width = 30% />
+            <div class="paddedline"> </div>
+            <i>Event-Related Potential (ERP) Responses for Open and Close Eye Events</i>
+            <div class="paddedline"> </div>
+            </center>
+
+            <p>The final step of this process was to map the classification output stream into robot commands. Using ROS via MATLAB, a Neato mobile robot was instructed to move forward when the classifier predicted the eyes closed state and to stop when predicting eyes opened.</p>
+        </div>
+    </div>
+    <!-- end main-container -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">ava.lakmazaheri@students.olin.edu</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

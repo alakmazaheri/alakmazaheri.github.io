@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>BCI Competition III</title>
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+       <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" height="80" width="250" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box-header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">About me</li>
+
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="contact.html">contact me</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>BCI Competition III</h1>
+        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / BCI Competition III</p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">BCI Competition III</h3>
+            <i><h4>Neurotechnology, Brains & Machines Course</h4></i>
+            <h5>Signal processing and classification methods for practical BCI systems</h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+            <i>Project Summary:</i>
+            <p>I performed a BCI Competition challenge to create a ternary classifier for motor imagery data.</p>
+            <p>I explored various algorithms for dimensionality reduction and machine learning, ultimately employing principal component analysis (PCA) for feature selection and a course Gaussian support vector machine (SVM) with error correcting output codes (ECOC) as a supervised learning model to distinguish between left motor imagery, right motor imagery, and word association with as high as 73% accuracy.</p>
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <div class="paddedline-two"> </div>
+                <li><i class="ion-ios-circle-filled"></i> MATLAB</li>
+                <li><i class="ion-ios-circle-filled"></i> Signal Processing</li>
+                <li><i class="ion-ios-circle-filled"></i> Machine Learning</li>
+            </ul>
+        </div>
+
+        <div class="col-md-11">
+            <div class="paddedline"> </div>
+
+            <i>Project Details:</i>
+            <p>BCI Competition III Dataset V provided both training and testing pre-processed datasets, in which 32-channel time series were transformed into 96-dimensional feature spaces. The resulting datasets included power spectral density values for frequencies in alpha and beta bandwidths (8-30 Hertz) along 8 centroparietal channels (C3, Cz, C4, CP1, CP2, P3, Pz, and P4).</p>
+            <p>To capture the data’s overall behavior while reducing the dimensionality of the problem, I selected the five components which accounted for maximum data variance using MATLAB’s principal component analysis function. As shown in Figure 1, this process reduces noisy behavior and physically distinguishes multiclass data.</p>
+
+            <center>
+            <div class="paddedline"> </div>
+            <img src="img/Year2/PCA.PNG" alt="" class="img-responsive"/>
+            <div class="paddedline"> </div>
+            <i>Figure 1 . PCA Transformation on Multiclass Motor Imagery Data. Axes represent the first three principal components of the dataset.</i>
+            <div class="paddedline"> </div>
+            </center>
+
+            <p>Once this transformation was complete, I applied support vector machines (SVMs), a learning model that attempts to maximize the margin between two distinct classes. Due to the nonlinear nature of the data, I used an SVM with a radial basis function (RBF) kernel, calculating the squared Euclidean distance between two vectors and thus placing greater weight on objects that are farther apart.</p>
+            <p>Since SVM only performs binary classifications, I additionally employed an error-correcting output codes (ECOC) multiclass model. This process breaks an n-ary classification into n(n – 1)/2 binary SVM learners. Using one versus one coding, I generated three hyperplanes to distinguish Class 1/Class 2, Class 2/Class 3, and Class 1/Class 3, respectively.</p>
+            <p>Figure 2 shows a sample hyperplane generated using SVM to distinguish between instances of left and right motor imagery.</p>
+
+            <center>
+            <div class="paddedline"> </div>
+            <img src="img/Year2/hyperplanegif.gif" alt="" class="img-responsive" />
+            <div class="paddedline"> </div>
+            <i>Figure 2. Motor Imagery Classification using SVM. The axes represent the first three principal components of the dataset. Class 2 (blue) indicates left motor imagery while Class 3 (red) indicates right motor imagery.</i>
+            </center>
+
+            <div class="paddedline"> </div>
+            <p>Passing testing data into the trained model plots it with respect to the aforementioned hyperplanes. Distinguishing where it lies physically in this space provides a prediction as to the state of the data.</p>
+            <p>The BCI Competition provided three training and one testing dataset for each of its three subjects. The competition deliverable was a set of class predictions for the testing dataset. Once submitted, teams would receive results about their accuracy. In order to test accuracies more freely, I performed intermediate tests of the model by training on two of the training datasets, testing on the third, and calculating the model’s accuracy. The system reported as high as 73.5% accuracy under this schema, with an average classification rate of 68.47%.</p>
+            <p>Additional efforts to improve the model resulted in overfitting. I experimented with methods of tuning the SVM model, such as using a Bayes Optimizer to determine kernel fineness and PCA component selection to explain up to 95% of the data variance. While these efforts improved model fitness on the training sets, it resulted in poorer classification on novel data. Thus, a coarse approach for signal analysis was kept for the highest, albeit non-optimal classification performance.</p>
+        </div>
+    </div>
+    <!-- end main-container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">ava.lakmazaheri@students.olin.edu</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
