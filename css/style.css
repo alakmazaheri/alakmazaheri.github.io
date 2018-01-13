@@ -929,7 +929,7 @@ footer img {
     background-attachment: fixed;
     background-position: center center;
     text-align: center;
-    height: 75%;
+    height: 50%;
     width: 100%;
 }
 
@@ -1142,15 +1142,22 @@ textarea:focus {
 ==================================================*/
 
 .cat-ul {
-    padding-left: 0;
+    padding-left: 20px;
     list-style: none
 }
 
 .cat-ul li i {
-    margin-right: 10px;
+    margin-left: 20px;
     color: #b78ee3;
     text-align: right;
+}
 
+.bonus-box {
+    border-radius:1px;
+    border: solid 1px black;
+    width:auto;
+    height:5%;
+    display:block;
 }
 
 

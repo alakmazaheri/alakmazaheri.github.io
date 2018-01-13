@@ -81,7 +81,7 @@
 
         <div class="col-md-12">
             <h3 class="text-uppercase">BCI Competition III</h3>
-            <i><h4>Neurotechnology, Brains & Machines Course</h4></i>
+            <i><h4>COURSE: Neurotechnology, Brains & Machines</h4></i>
             <h5>Signal processing and classification methods for practical BCI systems</h5>
             <div class="h-30"></div>
         </div>
@@ -101,30 +101,30 @@
             </ul>
         </div>
 
-        <div class="col-md-11">
+        <div class="col-md-12">
             <div class="paddedline"> </div>
 
             <i>Project Details:</i>
             <p>BCI Competition III Dataset V provided both training and testing pre-processed datasets, in which 32-channel time series were transformed into 96-dimensional feature spaces. The resulting datasets included power spectral density values for frequencies in alpha and beta bandwidths (8-30 Hertz) along 8 centroparietal channels (C3, Cz, C4, CP1, CP2, P3, Pz, and P4).</p>
-            <p>To capture the data’s overall behavior while reducing the dimensionality of the problem, I selected the five components which accounted for maximum data variance using MATLAB’s principal component analysis function. As shown in Figure 1, this process reduces noisy behavior and physically distinguishes multiclass data.</p>
+            <p>To capture the data’s overall behavior while reducing the dimensionality of the problem, I selected the five components which accounted for maximum data variance using MATLAB’s principal component analysis function. As shown below, this process reduces noisy behavior and physically distinguishes multiclass data.</p>
 
             <center>
             <div class="paddedline"> </div>
             <img src="img/Year2/PCA.PNG" alt="" class="img-responsive"/>
             <div class="paddedline"> </div>
-            <i>Figure 1 . PCA Transformation on Multiclass Motor Imagery Data. Axes represent the first three principal components of the dataset.</i>
+            <i>PCA Transformation on Multiclass Motor Imagery Data. Axes represent the first three principal components of the dataset.</i>
             <div class="paddedline"> </div>
             </center>
 
             <p>Once this transformation was complete, I applied support vector machines (SVMs), a learning model that attempts to maximize the margin between two distinct classes. Due to the nonlinear nature of the data, I used an SVM with a radial basis function (RBF) kernel, calculating the squared Euclidean distance between two vectors and thus placing greater weight on objects that are farther apart.</p>
             <p>Since SVM only performs binary classifications, I additionally employed an error-correcting output codes (ECOC) multiclass model. This process breaks an n-ary classification into n(n – 1)/2 binary SVM learners. Using one versus one coding, I generated three hyperplanes to distinguish Class 1/Class 2, Class 2/Class 3, and Class 1/Class 3, respectively.</p>
-            <p>Figure 2 shows a sample hyperplane generated using SVM to distinguish between instances of left and right motor imagery.</p>
+            <p>The below figure shows a sample hyperplane generated using SVM to distinguish between instances of left and right motor imagery.</p>
 
             <center>
             <div class="paddedline"> </div>
             <img src="img/Year2/hyperplanegif.gif" alt="" class="img-responsive" />
             <div class="paddedline"> </div>
-            <i>Figure 2. Motor Imagery Classification using SVM. The axes represent the first three principal components of the dataset. Class 2 (blue) indicates left motor imagery while Class 3 (red) indicates right motor imagery.</i>
+            <i>Motor Imagery Classification using SVM. The axes represent the first three principal components of the dataset. Class 2 (blue) indicates left motor imagery while Class 3 (red) indicates right motor imagery.</i>
             </center>
 
             <div class="paddedline"> </div>
