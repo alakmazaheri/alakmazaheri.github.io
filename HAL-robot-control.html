@@ -42,18 +42,26 @@
     <!-- end Preloader -->
 
     <div class="container-fluid">
-       <!-- box-header -->
+        <!-- box header -->
         <header class="box-header">
             <div class="box-logo">
                 <a href="index.html"><img src="img/logo.png" height="80" width="250" alt="Logo"></a>
             </div>
+
+            <ul class="top-nav">
+                <li><a href="index.html">Overview</a> </li>
+                <li><a href="about.html">About me</a></li>
+                <li class='active'><a href="portfolio.html">portfolio</a></li>
+                <li><a href="contact.html">contact me</a></li>
+            </ul>
+
             <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
+            <!-- <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
+            </a> -->
             <!-- box-primary-nav-trigger -->
         </header>
-        <!-- end box-header -->
+        <!-- end box header -->
 
         <!-- nav -->
         <nav>
@@ -72,34 +80,24 @@
     <!-- top-bar -->
     <div class="top-bar hal2banner">
         <h1>EEG Robot Control</h1>
-        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / HAL Robot Control</p>
+        <h5>Human Augmentation Lab</h5>
     </div>
     <!-- end top-bar -->
 
     <!-- main-container -->
     <div class="container main-container">
-
         <div class="col-md-12">
-            <h3 class="text-uppercase">Controlling a Mobile Robot by User State</h3>
-            <h5> Human Augmentation Lab </h5>
-            <div class="h-30"></div>
-        </div>
+            <!-- <h5>Controlling a Mobile Robot by User State</h5> -->
+            <!-- <div class="h-30"></div> -->
 
-        <div class="col-md-9">
             <i>Project Summary:</i>
             <p>The first task of the new lab was developing a rudimentary brain-computer interface (BCI) using commercial-grade technologies.</p>
-            <p>We used the Muse EEG headset to detect whether a subject was relaxing with their eyes closed or focusing with eyes opened. These states were mapped to the navigation of a Neato mobile robot, such that it would move forward when the user has their eyes closed and otherwise remain stationary. </p>
-        </div>
-
-        <div class="col-md-3">
             <ul class="cat-ul">
-                <li><i class="ion-ios-circle-filled"></i> Research </li>
-                <li><i class="ion-ios-circle-filled"></i> Signal Processing </li>
-                <li><i class="ion-ios-circle-filled"></i> <a href="https://github.com/HumanAugmentationLab/HALBCI">Github Repo</a> </li>
+                <li>Research </li>
+                <li>Signal Processing </li>
             </ul>
-        </div>
+            <p>We used the Muse EEG headset to detect whether a subject was relaxing with their eyes closed or focusing with eyes opened. These states were mapped to the navigation of a Neato mobile robot, such that it would move forward when the user has their eyes closed and otherwise remain stationary. </p>
 
-        <div class="col-sm-11">
             <i>Project Details:</i>
             <p>The steps of this process were four-fold.</p>
             <p>First, data was collected for the training period. Over the duration of a few minutes, a graphical interface repeatedly cued the user to either close or open their eyes. As they followed the instructions, a Muse electroencephalogram (EEG) headset non-invasively recorded the subject’s brainwaves from four electrodes placed along the forehead. A photodiode circuit secured to the monitor display was used to accurately detect when the stimulus was shown onscreen such that only the behavior from immediately after a stimulus would be analyzed for classification. </p>
