@@ -1238,16 +1238,16 @@ textarea:focus {
     list-style-type: circle;
     list-style-position: inside;
     /* position: relative; */
-    text-align: right;
+    /* text-align: right; */
     float:right;
-    /* align: right; */
+    align: right;
 }
 
 .cat-ul li {
     padding-left: 50px;
     /* background-position: 100% .4em; */
     /* position: absolute; */
-    left: 80%;
+    /* left: 80%; */
 }
 
 
