@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Low Cost EEG</title>
+    <title>Building an EEG</title>
     <link rel="icon" href="img/fav.png" type="image/x-icon">
 
     <!-- Bootstrap -->
@@ -52,7 +52,7 @@
                 <li><a href="index.html">Overview</a> </li>
                 <li><a href="about.html">About me</a></li>
                 <li class='active'><a href="portfolio.html">portfolio</a></li>
-                <li><a href="contact.html">contact me</a></li>
+                <li><a href="reports.html">Reports</a></li>
             </ul>
 
             <!-- box-nav -->
@@ -64,16 +64,16 @@
         <!-- end box header -->
 
         <!-- nav -->
-        <nav>
+        <!-- <nav>
             <ul class="box-primary-nav">
                 <li class="box-label">About me</li>
 
                 <li><a href="index.html">Overview</a></li>
                 <li><a href="about.html">About me</a></li>
                 <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="contact.html">contact me</a></li>
+                <li><a href="reports.html">Reports</a></li>
             </ul>
-        </nav>
+        </nav> -->
         <!-- end nav -->
     </div>
 
@@ -89,14 +89,16 @@
         <div class="col-md-12">
             <i> Project Summary: </i>
             <ul class="cat-ul">
+                <br>
                 <li>Circuits </li>
                 <li>Electronic Filters </li>
             </ul>
-            <p>The goal of this project was to design and build an electroencephalogram (EEG) that records brainwaves non-invasively through the scalp. Specifically, we were interested in distinguishing between relaxed and focused states of the user, which are frequently found to characterize various control modes in brain-computer interfaces. Our functional, relatively inexpensive EEG is a step towards a future of lower-cost, flexible solutions for the many people who cannot otherwise access such technologies.</p>
+            <p>The goal of this project was to design and build an electroencephalogram (EEG) that records brainwaves non-invasively through the scalp. Specifically, we were interested in distinguishing between relaxed and focused states of the user, which are frequently found to characterize various control modes in brain-computer interfaces. Our functional, relatively inexpensive EEG is a step towards designing viable, low-cost, yet functional solutions for use across the globe.</p>
 
+            <div class="paddedline"> </div>
 
             <i> Project Details: </i>
-            <p>A major challenge of recording neuroelectrical activity is decoding a noisy, small magnitude signal via filtering and amplification. We constructed a circuit with notch filtering to remove the surrounding powerline frequency (60 Hz) and both high and low pass filters to accentuate alpha and beta wave ranges (8-32 Hz). These have been found to correspond to relaxed and focused mental states, respectively.</p>
+            <p>A major challenge for recording neuroelectrical activity is decoding a noisy, small magnitude signal via filtering and amplification. We constructed a circuit with notch filtering to remove the surrounding powerline frequency (60 Hz), and used both high and low pass filters to accentuate alpha and beta wave ranges (8-32 Hz). These have been found to correspond to relaxed and focused mental states, respectively.</p>
             <center>
                 <img src="img/Year1/eegschematic.jpg" alt="image" class="img-responsive" width = 80%/>
                 <div class="paddedline"> </div>
@@ -104,7 +106,7 @@
             </center>
 
             <p>Three electrodes were placed on the user via conductive paste: a grounding electrode on the earlobe, a reference on the mastoid, and a primary signal electrode on the occipitoparietal region of the scalp.</p>
-            <p>In preliminary testing, the user was instructed to relax with their eyes closed, blink rapidly, clench their jaw, and focus while performing mental math.</p>
+            <p>In preliminary testing, the user was instructed to relax with her eyes closed, blink rapidly, clench her jaw, and focus while performing mental math.</p>
             <p>A 10 Hertz wave was observable via WaveForms in real-time during relaxed states. There was also a visible difference between relaxed states and muscle movements. This visual clarity gave a preliminary confidence in the data.</p>
 
             <center>
@@ -113,7 +115,7 @@
                 </video>            </center>
             <div class="paddedline"> </div>
 
-            <p>The recorded trials that followed consisted of six thirty-second blocks where the user was instructed to either relax with their eyes closed or perform a mental math task with their eyes opened.</p>
+            <p>The recorded trials that followed consisted of six thirty-second blocks where the user was instructed to either relax with her eyes closed or perform a mental math task with her eyes opened.</p>
             <p>A Fast Fourier Transform was applied to the recorded trials in MATLAB, translating a time series response into the frequency domain. This allowed for a clearer analysis of alpha wave ranges.</p>
 
             <center>
@@ -122,7 +124,7 @@
             <div class="paddedline"> </div>
 
             <p>The magnitude of alpha waves in the relaxed state are comparatively higher than those in the focused state. The amplitude peak around 10 Hz is a commonly observed phenomenon corresponding to the user’s closed eyes.</p>
-            <p>These results suggest a successful EEG which can be used to distinguish between relaxed and focused mental states. Further, with its net cost of approximately $25, this circuit is an extremely cost-effective alternative to commercial EEGs, commonly priced between $80 to $3,000</p>
+            <p>These results suggest an effective EEG can be built for distinguishing between relaxed and focused mental states. Further, with its net cost of approximately $25, this circuit is an extremely cost-effective alternative to commercial EEGs, commonly priced between $80 to $3,000.</p>
 
         </div>
     </div>

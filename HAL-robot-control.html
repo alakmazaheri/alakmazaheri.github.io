@@ -52,7 +52,7 @@
                 <li><a href="index.html">Overview</a> </li>
                 <li><a href="about.html">About me</a></li>
                 <li class='active'><a href="portfolio.html">portfolio</a></li>
-                <li><a href="contact.html">contact me</a></li>
+                <li><a href="reports.html">Reports</a></li>
             </ul>
 
             <!-- box-nav -->
@@ -64,16 +64,16 @@
         <!-- end box header -->
 
         <!-- nav -->
-        <nav>
+        <!-- <nav>
             <ul class="box-primary-nav">
                 <li class="box-label">About me</li>
 
                 <li><a href="index.html">Overview</a></li>
                 <li><a href="about.html">About me</a></li>
                 <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="contact.html">contact me</a></li>
+                <li><a href="reports.html">Reports</a></li>
             </ul>
-        </nav>
+        </nav> -->
         <!-- end nav -->
     </div>
 
@@ -91,18 +91,20 @@
             <!-- <div class="h-30"></div> -->
 
             <i>Project Summary:</i>
-            <p>The first task of the new lab was developing a rudimentary brain-computer interface (BCI) using commercial-grade technologies.</p>
             <ul class="cat-ul">
+                <br>
                 <li>Research </li>
                 <li>Signal Processing </li>
             </ul>
-            <p>We used the Muse EEG headset to detect whether a subject was relaxing with their eyes closed or focusing with eyes opened. These states were mapped to the navigation of a Neato mobile robot, such that it would move forward when the user has their eyes closed and otherwise remain stationary. </p>
+            <p>The first project undertaken at HAL (Human Augmentation Lab) was the development of  a rudimentary brain-computer interface (BCI) using commercial-grade technologies.</p>
+
+            <p>We used the Muse EEG headset to detect whether a subject was relaxing with her eyes closed or focusing with eyes opened. These states were mapped to the navigation of a Neato mobile robot, such that it would move forward when the user has her eyes closed and otherwise remain stationary. </p>
 
             <i>Project Details:</i>
-            <p>The steps of this process were four-fold.</p>
-            <p>First, data was collected for the training period. Over the duration of a few minutes, a graphical interface repeatedly cued the user to either close or open their eyes. As they followed the instructions, a Muse electroencephalogram (EEG) headset non-invasively recorded the subject’s brainwaves from four electrodes placed along the forehead. A photodiode circuit secured to the monitor display was used to accurately detect when the stimulus was shown onscreen such that only the behavior from immediately after a stimulus would be analyzed for classification. </p>
-            <p>The following training procedure was then applied to the recorded data to identify maximally different patterns between the two user states. All signal processing and analysis was performed in BCILAB, a MATLAB toolbox developed by Swartz Center for Computational Neuroscience. After preliminary epoching and filtering, we applied spectral Common Spatial Pattern (CSP) for feature extraction and computed a statistical model of the feature distributions using Linear Discriminant Analysis (LDA). The model was trained and evaluated using Mean Square Error with cross-validation.</p>
-            <p>The training model was then applied to new data for live classification. As the user opens and closes their eyes, the processing schema predicts which of the two classes the user is performing in real-time and casts the prediction to a live output stream. The system as described above performed well in capturing the transition between states via event-related potentials, but poorly represented longer-term oscillatory processes pertaining when an individual sustained either position.</p>
+            <p>The project can best be described in four steps.</p>
+            <p>First, data was collected for the training period. Over the duration of a few minutes, a graphical interface repeatedly cued the user to either close or open her eyes. As she followed the instructions, a Muse electroencephalogram (EEG) headset non-invasively recorded the subject’s brainwaves from four electrodes placed along the forehead. A photodiode circuit secured to the monitor display was used to accurately detect when the stimulus was shown onscreen such that only the behavior from immediately after a stimulus would be analyzed for classification. </p>
+            <p>Seconds, the following training procedure was applied to the recorded data to identify maximally different patterns between the two user states. All of the signal processing and analysis was performed in BCILAB, a MATLAB toolbox. After preliminary epoching and filtering, the Spectral Common Spatial Pattern (CSP) technique was used for feature extraction, and a statistical model of the feature distributions using Linear Discriminant Analysis (LDA) was constructed. The model was trained and evaluated using Mean Square Error with cross-validation.</p>
+            <p>Third, the training model was applied to new data for live classification. As the user opens and closes her eyes, the processing schema predicts which of the two classes the user is performing in real-time and casts the prediction to a live output stream. The system as described above performed well in capturing the transition between states via event-related potentials, but poorly represented longer-term oscillatory processes pertaining when an individual sustained either position.</p>
 
             <center>
             <div class="paddedline"> </div>
@@ -113,7 +115,7 @@
             <div class="paddedline"> </div>
             </center>
 
-            <p>The final step of this process was to map the classification output stream into robot commands. Using ROS via MATLAB, a Neato mobile robot was instructed to move forward when the classifier predicted the eyes closed state and to stop when predicting eyes opened.</p>
+            <p>Finally, the classification output stream was mapped into robot commands. Using ROS via MATLAB, a Neato mobile robot was instructed to move forward when the classifier predicted the eyes closed state and to stop when predicting eyes opened.</p>
         </div>
     </div>
     <!-- end main-container -->

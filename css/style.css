@@ -146,6 +146,29 @@ title-h5 {
     padding-left: 30px;
     /* ffbf00 */
 }
+
+h6{
+    /* float:left; */
+    font-size: 40px;
+    color: #999;
+    font-weight: 400;
+}
+
+h6 span{
+    /* float:left; */
+    font-size: 15px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+h6 span-2{
+    /* float:left; */
+    font-size: 15px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    display: block;
+    font-style: italic;
+}
 /* preloader
 ==================================================*/
 
@@ -996,6 +1019,16 @@ footer img {
     line-height: 80px;
 }
 
+.top-bar h2{
+    font-size: 20px;
+    /* text-transform: uppercase; */
+    font-weight: 300;
+    color: #000000;
+    padding-top: -10px;
+    padding-bottom: 20px;
+    /* line-height: 30px; */
+}
+
 .top-bar h5 {
     color: #b78ee3;
     font-size: 20px;
@@ -1085,6 +1118,13 @@ footer img {
     background: linear-gradient( rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url(../img/banners/sdbanner.PNG);
     height: 350px;
     position: relative;
+}
+
+.cspbanner{
+    background: linear-gradient( rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url(../img/banners/cspbanner.PNG);
+    height: 350px;
+    position: relative;
+}
 /* Services page
 ==================================================*/
 
@@ -1238,9 +1278,9 @@ textarea:focus {
     list-style-type: circle;
     list-style-position: inside;
     /* position: relative; */
-    /* text-align: right; */
+    text-align: left;
     float:right;
-    align: right;
+    /* align: right; */
 }
 
 .cat-ul li {

@@ -52,7 +52,7 @@
                 <li><a href="index.html">Home</a> </li>
                 <li><a href="about.html">About me</a></li>
                 <li class='active'><a href="portfolio.html">portfolio</a></li>
-                <li><a href="contact.html">contact me</a></li>
+                <li><a href="reports.html">Reports</a></li>
             </ul>
 
             <!-- box-nav -->
@@ -64,16 +64,16 @@
         <!-- end box header -->
 
         <!-- nav -->
-        <nav>
+        <!-- <nav>
             <ul class="box-primary-nav">
                 <li class="box-label">About me</li>
 
                 <li><a href="index.html">Overview</a></li>
                 <li><a href="about.html">About me</a></li>
                 <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="contact.html">contact me</a></li>
+                <li><a href="reports.html">Reports</a></li>
             </ul>
-        </nav>
+        </nav> -->
         <!-- end nav -->
     </div>
 
@@ -88,21 +88,23 @@
     <div class="container main-container">
         <div class="col-md-12">
             <i>Project Summary:</i>
-            <p>This work is an interactive game application for human versus A.I. play. It features an easy-to-use GUI and a reinforcement learning opponent that improves as it plays.</p>
             <ul class="cat-ul">
+                <br>
                 <li>Python</li>
                 <li>Reinforcement Learning</li>
             </ul>
+            <p>This work is an interactive game application for human versus AI play. It features an easy-to-use GUI and an AI opponent that continuously improves its performance using reinforcement learning.</p>
+
             <div class="paddedline"> </div>
 
             <i>Project Details:</i>
-            <p>This work included four major components: a poker game model, A.I. bot, controller, and user interface. </p>
-            <p>The game model defines all of the objects and interactions used to play the game of poker, including pocket cards, wagers, and betting statistics. The bot uses reinforcement learning to develop a knowledge base of what actions maximize monetary reward. The controller then takes input from either the bot or the human player and uses it to manipulate the game model. Finally, the user interface visually reflects changes in the model while allowing further input.</p>
+            <p>This work included four major components: a poker game model, an AI bot, a controller, and a user interface. </p>
+            <p>The game model defines all the objects and interactions used to play the game of poker, including pocket cards, wagers, and betting statistics. The bot uses reinforcement learning to develop a knowledge base of what actions maximize monetary reward. The controller then takes input from either the bot or the human player and uses it to manipulate the game model. Finally, the user interface visually reflects changes in the model while allowing further input.</p>
 
-            <p>In this project, my primary role was the development and programming of the bot.</p>
+            <p>In this work, my primary role was to develop and program the bot.</p>
             <p>To have the program emulate a human player, it required a policy to map the current state of the environment (i.e. the model) to all possible actions and their expected rewards. In PokerBot, we abstracted the environment to a metric of the player’s current hand strength with possible actions being to fold, check, call, or raise.</p>
             <p>Using a Monte Carlo method, the bot begins play via random sampling of possible actions. As games unfold, it will be rewarded or penalized for its actions proportionally to the amount of money it has lost or gained by each game’s end.</p>
-            <p>Averaging the sampled rewards for each state/action pair it encounters will give the bot an approximation for what choice will produce the highest monetary benefit at any state of a game.</p>
+            <p>The average sampled rewards for each state/action pair it encounters gives the bot an approximation for what possible choice would produce the highest monetary benefit at any state of a game.</p>
             <p>To encourage semi-exploratory behavior, the bot pseudorandomly chooses from a weighted matrix of actions such that the “best” action has an increased probability of being chosen, but the algorithm may still take risks to find an even more rewarding strategy.</p>
             <p>For more information and installation instructions, see our project <a href="https://hackathon64.wixsite.com/pokerbot"> website</a>. </p>
         </div>

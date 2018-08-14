@@ -52,7 +52,7 @@
                 <li><a href="index.html">Overview</a> </li>
                 <li><a href="about.html">About me</a></li>
                 <li class='active'><a href="portfolio.html">portfolio</a></li>
-                <li><a href="contact.html">contact me</a></li>
+                <li><a href="reports.html">Reports</a></li>
             </ul>
 
             <!-- box-nav -->
@@ -71,7 +71,7 @@
                 <li><a href="index.html">Overview</a></li>
                 <li><a href="about.html">About me</a></li>
                 <li><a href="portfolio.html">portfolio</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="contact.html">contact me</a></li>
+                <li><a href="reports.html">Reports</a></li>
             </ul>
         </nav>
         <!-- end nav -->
@@ -89,20 +89,21 @@
     <!-- main-container -->
     <div class="container main-container">
 
-        <div class="col-md-9">
-            <i>Project Summary:</i>
-            <p>Last year, major undertaking of the newly formed Human Augmentation Lab was to validate our medical-grade EEG equipment and begin piloting experiments. We collected data pertaining to visual attention using the 32-channel Enobio EEG Cap. The subject was instructed to attend to one of two flashing checkerboards on a computer monitor, each oscillating at distinct frequencies. The Steady State Visual Evoked Potential (SSVEP) response was captured over the occipital lobe and validated using signal processing and frequency analysis in EEGLAB.</p>
-        </div>
-
-        <ul class="cat-ul">
-            <br>
-            <li> Research </li>
-            <li> Signal Processing </li>
-            <li> Experimental Design </li>
-            <!-- <li><i class="ion-ios-circle-filled"></i> <a href="https://github.com/HumanAugmentationLab/HALBCI">Github Repo</a> </li> -->
-        </ul>
-
         <div class="col-md-12">
+            <i>Project Summary:</i>
+
+            <ul class="cat-ul">
+                <br>
+                <li> Research </li>
+                <li> Signal Processing </li>
+                <li> Experimental Design </li>
+                <!-- <li><i class="ion-ios-circle-filled"></i> <a href="https://github.com/HumanAugmentationLab/HALBCI">Github Repo</a> </li> -->
+            </ul>
+
+            <p>Last year, major undertaking of the newly formed Human Augmentation Lab was to validate our medical-grade EEG equipment and begin piloting experiments. We collected data pertaining to visual attention using the 32-channel Enobio EEG Cap. The subject was instructed to attend to one of two flashing checkerboards on a computer monitor, each oscillating at distinct frequencies. The Steady State Visual Evoked Potential (SSVEP) response was captured over the occipital lobe and validated using signal processing and frequency analysis in EEGLAB.</p>
+
+
+
             <div class="paddedline-two"> </div>
             <center>
                 <img src="img/Year1/summer1.jpg" alt="" height = 350 style= "PADDING-RIGHT: 50px;" />
@@ -116,7 +117,7 @@
             <i>Project Details:</i>
             <p>As stated above, all steps that follow were implemented using EEGLAB, a MATLAB toolbox for offline biosignal analysis.</p>
             <p>First, we performed channel selection and epoched the data, compiling all trials in which the user attended to the lower frequency checkerboard and distinguishing them from trials attending to the higher frequency.</p>
-            <p>We then performed Independent Component Analysis (ICA) on both datasets and visually inspected the components in the frequency domain, rejecting artifacts and selecting the most relevant responses for the known target frequency. We applied this component pruning to a concatenated version of the data, plotted the mean spectral response for selected channels, and visualized the topographic power distribution at target frequencies. As shown below, target frequencies (e.g., 15 and 20 Hertz) are visually apparent post-processing.</p>
+            <p>We then performed Independent Component Analysis (ICA) on both datasets and visually inspected the components in the frequency domain, rejecting artifacts and selecting the most relevant responses for the known target frequency. We applied this component pruning to a concatenated version of the data, plotted the mean spectral response for selected channels, and visualized the topographic power distribution at target frequencies. As shown below, target frequencies (e.g., 15 and 20 Hertz) are visually apparent after processing.</p>
 
             <center>
             <div class="paddedline"> </div>
@@ -133,6 +134,9 @@
             <br>
             <i>Power Response for 15 vs. 20 Hz Attention</i>
             </center>
+            <div class="paddedline"> </div>
+
+            <p>This month-long effort validated the lab’s ability to collect meaningful data from a medical-grade EEG and to generate a procedure for robustly tracking user attention.</p>
         </div>
     </div>
     <!-- end main-container -->
