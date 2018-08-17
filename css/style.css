@@ -1143,6 +1143,24 @@ footer img {
     position: relative;
 }
 
+.pdebanner{
+    background: linear-gradient( rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url(../img/banners/pdebanner.PNG);
+    height: 350px;
+    position: relative;
+}
+
+.beambanner{
+    background: linear-gradient( rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url(../img/banners/cantilever.PNG);
+    height: 350px;
+    position: relative;
+}
+
+.beam2banner{
+    background: linear-gradient( rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url(../img/Year2/cantilever3D.PNG);
+    height: 350px;
+    position: relative;
+}
+
 .trecbanner{
     background: linear-gradient( rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url(../img/banners/trecbanner.PNG);
     height: 350px;

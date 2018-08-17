@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Software Architecture for Humanoid Control</title>
+    <title>PDE: Hydrodynamics</title>
     <link rel="icon" href="img/fav.png" type="image/x-icon">
 
     <!-- Bootstrap -->
@@ -78,47 +78,28 @@
     </div>
 
     <!-- top-bar -->
-    <div class="top-bar trecbanner">
-        <h1-alt>Software Architecture for Humanoid Control</h1-alt>
-        <h5>Terrestrial Robotics Engineering and Controls Laboratory</h5>
+    <div class="top-bar lin2banner">
+        <h1-alt>Modeling Physical Systems: Hydrodynamics</h1-alt>
+        <h5>Partial Differential Equations Course</h5>
     </div>
     <!-- end top-bar -->
 
     <!-- main-container -->
     <div class="container main-container">
+
         <div class="col-md-12">
-            <i> Project Summary: </i>
-            <p>The Terrestrial Robotics Engineering and Controls (TREC) Lab at Virginia Tech is developing a semi-autonomous humanoid robot to perform disaster search-and-rescue tasks. In the preliminary stage of this work, I was responsible for 1) identifying a software architecture that can support such advanced locomotion and manipulation tasks and 2) adapting this platform the TREC Lab’s custom use.</p>
-            <br>
+            <p><i>Project Summary:</i></p>
+            <ul class="cat-ul">
+                <li>Fluid Dynamics</li>
+                <li>Non-linear PDEs</li>
+            </ul>
+            <p>In order to gain experience deriving and interpreting non-linear partial differential equations from a given physical system, my partner and I modeled shallow water waves over uneven topography. We then linearized the results and analyzed them to demonstrate qualitative and approximate behavior. Our full report is attached <a href="img/Year2/pde-hydrodynamics.pdf" target="_blank">here</a>.</p>
 
-            <center>
-                <video width=40% controls align="top">
-                <source src="img/Year2/karate-kid-demo.mp4" type="video/mp4">
-                </video>
+        <center>
+            <a href="img/Year2/pde-hydrodynamics.pdf" target="_blank"><img src="img/Year2/shallow-wave-2.PNG" alt="image" class="img-responsive" width = 50%/></a>
+        </center>
 
-                <video width=40% controls align="top">
-                <source src="img/Year2/walk-demo.mp4" type="video/mp4">
-                </video>
-             </center>
-            <div class="paddedline"> </div>
-            <div class="paddedline"> </div>
-
-            <i> Project Details: </i>
-            <p>My first goal was to conceptualize a robust operating logic for a generic humanoid robot. After studying various strategies from the DARPA Robotics Challenge, I synthesized the following system flow that maps abstract tasks to low-level control.</p>
-            <center>
-                <img src="img/Year2/control-architecture.png" alt="image" class="img-responsive" width = 50%/>
-                <div class="paddedline"> </div>
-            </center>
-
-            <p>In order to realize this software architecture, I began by evaluating existing open-source control applications for functionality, modularity, and simplicity, while heeding special attention to real-time operation.</p>
-            <p>My primary findings were: 1) XBotCore: a software platform that supports real-time humanoid control and 2) IHMC Open Robotics Software: a set of libraries for out-of-the-box planning and robot operation. Both allow modelling abstract behaviors using finite state machines, multi-tasking via a whole-body inverse kinematics engine, and simplifying complex structures into a universal robot description format.</p>
-            <p>I studied both platforms at length to understand their underlying control architecture. These efforts served as an introduction to various bipedal control strategies and algorithms. I was then able to use both softwares to generate controllable robot models, send low-level joint commands, and build high-level behavior sequences.</p>
-
-
-
-            <p>I describe this work in full, with detailed instructions for future lab use, in a <a href="img/Year2/software-architecture-humanoid.pdf" download> Technical Report & Guide</a>.</p>
-
-        </div>
+    </div>
     </div>
     <!-- end main-container -->
 
